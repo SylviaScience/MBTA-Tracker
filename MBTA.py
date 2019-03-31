@@ -31,9 +31,7 @@ printDirectionName(route_name,api_key)
 # Function for getting route number for a given route name, direction, and number of stops starting at that direction
 
 def getRouteNum(route_name,direction,stops_from_direc,api_key) :
-
     URL = "http://realtime.mbta.com/developer/api/v2/stopsbyroute?"       + "api_key=" + api_key      + "&route=" + route_name     + "&format=json"
-    
     print(URL)
     response =requests.get(URL)
     data =  response.json();
