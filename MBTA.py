@@ -10,9 +10,7 @@ import datetime
 # Function for getting directions names for a given route name
 
 def printDirectionName(route_name,api_key) :
-    
     stop_numbers_URL = "http://realtime.mbta.com/developer/api/v2/stopsbyroute?"       + "api_key=" + api_key      + '&route=' + route_name     + '&format=json'
-    
     print(stop_numbers_URL)  
     
     response =requests.get(stop_numbers_URL)
@@ -84,9 +82,6 @@ def nextTrain(requestURL):
 next2trains = nextTrain(requestURL)
 print('Train 1 time:', next2trains[0],':',next2trains[1])
 print('Train 2 time:',next2trains[2],':',next2trains[3])
-
-
-# In[ ]:
 
 
 
