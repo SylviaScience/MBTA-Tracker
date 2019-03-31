@@ -65,7 +65,6 @@ import requests
 import json
 import datetime
 
-#Roxbury Crossing stop IDs: 70008 -> Forest Hills, 70009 -> Oak Grove
 # Revere beach = 70057
 
 route_name = 'Blue'
