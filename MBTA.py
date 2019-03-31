@@ -1,16 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
 import requests
+import json
+import datetime
+
 
 
 # Function for getting directions names for a given route name
-
-# In[43]:
-
 
 def printDirectionName(route_name,api_key) :
     
@@ -35,9 +32,6 @@ printDirectionName(route_name,api_key)
 
 # Function for getting route number for a given route name, direction, and number of stops starting at that direction
 
-# In[41]:
-
-
 def getRouteNum(route_name,direction,stops_from_direc,api_key) :
 
     URL = "http://realtime.mbta.com/developer/api/v2/stopsbyroute?"       + "api_key=" + api_key      + "&route=" + route_name     + "&format=json"
@@ -56,15 +50,6 @@ direction = 0
 stops_from_direc = 1 # Number of stops after direction
 stop_id = getRouteNum(route_name,direction,stops_from_direc,api_key)
 print(stop_id)
-
-
-# In[44]:
-
-
-import requests
-import json
-import datetime
-
 
 # Revere beach = 70057
 
